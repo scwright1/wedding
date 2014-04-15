@@ -1,0 +1,24 @@
+{
+	"name": "Wedding",
+	"version": "0.0.1",
+	"author": "Stephen Wright <ste.c.wr@gmail.com>",
+	"contributors": [
+		{
+			"name": "Stephen Wright",
+			"email": "ste.c.wr@gmail.com"
+		}
+	],
+	"repository":  {
+		"type": "git",
+		"url": "https://github.com/scwright1/wedding.git"
+	},
+	"dependencies": {
+		"express": "*",
+		"body-parser": "*",
+		"method-override": "*",
+		"cookie-parser": "*",
+		"morgan": "*",
+		"async": "*",
+		"hbs": "*"
+	}
+}
