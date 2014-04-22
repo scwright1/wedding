@@ -19,6 +19,10 @@
 		"cookie-parser": "*",
 		"morgan": "*",
 		"async": "*",
-		"hbs": "*"
+		"hbs": "*",
+		"path": "*",
+		"when": "*",
+		"buggr": "*",
+		"echojs": "*"
 	}
 }

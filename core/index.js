@@ -1,10 +1,16 @@
+var config		= require('./server/config'),
+		console		= require('buggr');
+
 function server() {
 	return;
 }
 
 function start() {
-	var srv = require('./server');
-	srv();
+	config.load().then(function() {
+		if(process.env.NODE_ENV === 'development') console.emphasis('App Starting...');
+		var srv = require('./server');
+		srv();
+	});
 }
 
 server.start = start;
