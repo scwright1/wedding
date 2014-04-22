@@ -2,6 +2,7 @@ var express		= require('express'),
 		async			= require('async'),
 		console		= require('buggr'),
 		config		= require('./config'),
+		hbs			= require('hbs'),
 		configuration,
 		dev = true;
 
@@ -53,6 +54,7 @@ function configServer(server, callback) {
 		server.use(express.static(config.paths().client));
 		server.set('view engine', 'hbs');
 		server.set('views', config.paths().server+'/views');
+		hbs.registerPartials(config.paths().server+'/views/partials');
 		server.use(require('morgan')('dev'));
 		server.use(require('body-parser')());
 		server.use(require('method-override')());
