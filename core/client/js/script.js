@@ -17,7 +17,7 @@ function countdown(dt, id) {
         if (distance < 0) {
 
             clearInterval(timer);
-            document.getElementById(id).innerHTML = 'EXPIRED!';
+            document.getElementById(id).innerHTML = 'WEDDING DAY!';
 
             return;
         }
@@ -25,11 +25,28 @@ function countdown(dt, id) {
         var hours = Math.floor((distance % _day) / _hour);
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
+        var dayend = 'days', hourend = 'hours', minend = 'mins', secend = 'secs';
 
-        document.getElementById(id).innerHTML = days + 'days ';
-        document.getElementById(id).innerHTML += hours + 'hrs ';
-        document.getElementById(id).innerHTML += minutes + 'mins ';
-        document.getElementById(id).innerHTML += seconds + 'secs';
+        if(days === 1) {
+        	dayend = 'day';
+        }
+        if(hours === 1) {
+        	hourend = 'hour';
+        }
+        if(minutes === 1) {
+            minend = 'min';
+        }
+        if(seconds === 1) {
+            secend = 'sec';
+        }
+        $('#countdown > #days').html(days);
+        $('#countdown > #days-text').html(dayend);
+        //$('#countdown > #hours').html(hours);
+        //$('#countdown > #hours-text').html(hourend);
+        //$('#countdown > #minutes').html(minutes);
+        //$('#countdown > #minutes-text').html(minend);
+        //$('#countdown > #seconds').html(seconds);
+        //$('#countdown > #seconds-text').html(secend);
     }
 
     timer = setInterval(showRemaining, 1000);
