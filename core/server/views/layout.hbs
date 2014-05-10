@@ -15,38 +15,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <!--[if gte IE 9]><style type="text/css">.gradient {filter: none;}</style><![endif]-->
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <script type='text/javascript'>
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(50.989042,-0.923452),
-          zoom: 11
-          //50.97743,-0.918268
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-        var venueImage = 'img/marker.png';
-        var venue = new google.maps.LatLng(50.97743,-0.918268);
-        var marker = new google.maps.Marker({
-          icon: venueImage,
-          position: venue,
-          map: map,
-          title: 'Wedding Venue: Tithe Barn - Petersfield'
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          var infowindow = new google.maps.InfoWindow({
-            content: marker.title
-          });
-          infowindow.open(map,marker);
-        });
-        layer = new google.maps.FusionTablesLayer({
-          query: {
-            select: '\'Geocoding Address\'',
-            from: '1OVcql7BYneaxTTOrcELOM-vkw7qXayl28_TrtEVz'
-          }
-        });
-        layer.setMap(map);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
   </head>
   <body>
     {{{body}}}

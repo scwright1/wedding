@@ -2,6 +2,11 @@
  * Font Stylesheets
  */
 
+@grey: #252525;
+@mint: #a2e0cf;
+@purple: #9052a9;
+
+
 @font-face {
     font-family: 'governorregular';
     src: url('../fonts/governor-webfont.eot');
@@ -53,6 +58,43 @@ body {
 	background: #252525;
 	font-size: 30px;
 	font-family: 'governorregular', sans-serif;
+}
+
+/**
+ * Primary section stylesheet
+ */
+
+.primary-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#us-section {
+    background: @mint;
+}
+
+#us-section > .splash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform:    translate(-50%, -50%);
+    -ms-transform:     translate(-50%, -50%);
+    -o-transform:      translate(-50%, -50%);
+    transform:         translate(-50%, -50%);
+    width: 80%;
+    height: 40%;
+    border-top: 2px solid #f3f3f7;
+    border-bottom: 2px solid #f3f3f7;
+}
+
+#meeting-section {
+    background: @grey;
+}
+
+#map-section {
+    background: @purple;
 }
 
 .header {
@@ -108,11 +150,6 @@ body {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-#map-container {
-    width: 100%;
-    height: 88%;
-}
-
 #map-canvas {
-    height: 88%;
+    height: 100%;
 }
