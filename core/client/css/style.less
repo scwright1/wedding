@@ -5,6 +5,7 @@
 @grey: #252525;
 @mint: #a2e0cf;
 @purple: #9052a9;
+@light: #f3f3f7;
 
 
 @font-face {
@@ -83,10 +84,33 @@ body {
     -ms-transform:     translate(-50%, -50%);
     -o-transform:      translate(-50%, -50%);
     transform:         translate(-50%, -50%);
-    width: 80%;
-    height: 40%;
-    border-top: 2px solid #f3f3f7;
-    border-bottom: 2px solid #f3f3f7;
+    width: 1000px;
+    height: 500px;
+    color: @mint;
+    background: url(../img/getting-hitched.png) top left no-repeat;
+}
+
+#us-section > .splash > .countdown {
+    font-family: 'mission_scriptregular', cursive;
+    color: @mint;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    font-size: 48px;
+    line-height: 100px;
+}
+
+#us-section > .next {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -25px;
+    background: url(../img/next.png) center center no-repeat;
 }
 
 #meeting-section {

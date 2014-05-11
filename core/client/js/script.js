@@ -198,7 +198,7 @@ function initMap() {
         }
     });
     layer.setMap(map);
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initMap);
 }
 
 function countdown(dt, id) {
@@ -238,8 +238,7 @@ function countdown(dt, id) {
         if(seconds === 1) {
             secend = 'sec';
         }
-        $('#countdown > #days').html(days);
-        $('#countdown > #days-text').html(dayend);
+        $('#us-section > .splash > .countdown > b > span').html(days);
         //$('#countdown > #hours').html(hours);
         //$('#countdown > #hours-text').html(hourend);
         //$('#countdown > #minutes').html(minutes);
