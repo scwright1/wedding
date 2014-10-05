@@ -23,6 +23,7 @@
 		"path": "*",
 		"when": "*",
 		"buggr": "*",
-		"echojs": "*"
+		"echojs": "*",
+		"flickr-with-uploads": "*"
 	}
 }

@@ -1,4 +1,14 @@
 <!-- map -->
 <section id='map-section' class='primary-section'>
 	<div id='map-canvas'></div>
+	<script>
+		L.mapbox.accessToken = 'pk.eyJ1Ijoic2N3cmlnaHQxIiwiYSI6Ik5KR2hFNzQifQ.wlp-D9rC-6-Tyq-OCpjrNA';
+		var map = L.mapbox.map('map-canvas', 'scwright1.jlbd5o71', {
+			zoomControl: true,
+			minZoom: 10,
+			maxZoom: 15
+		}).setView([50.951, -0.926], 11);
+		map.scrollWheelZoom.disable();
+		map.touchZoom.disable();
+	</script>
 </section>
