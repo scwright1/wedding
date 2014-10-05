@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	countdown('10/03/2015 0:0 AM', 'countdown');
+    $('#scroll-to-top').click(function() {
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+        return false; 
+    });
 });
 
 function countdown(dt, id) {
